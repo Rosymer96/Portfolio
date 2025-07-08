@@ -1,0 +1,55 @@
+<!-- Nuevo -->
+<mat-toolbar class="nav">
+  <a class="logo">
+    <img class="img-logo" src="/Logo-2.jpg" />
+  </a>
+  <!-- Menú desktop -->
+  <div class="menu-desktop">
+    <button class="menu-button" mat-button>About</button>
+    <button class="menu-button" mat-button>Projects</button>
+    <button class="menu-button" mat-button>Skills</button>
+    <button class="menu-button" mat-button>Contact</button>
+  </div>
+
+  <!-- <span class="menu-spacer"></span> -->
+
+  <button
+    mat-icon-button
+    class="menu-mobile"
+    aria-label="menu-icon"
+    (click)="drawer.toggle()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-sidenav
+  #drawer
+  mode="over"
+  class="sidenav"
+  (keydown.escape)="drawer.close()"
+  (openedChange)="onOpenedChange($event)"
+>
+  <div
+    class="modal-overlay"
+    (click)="drawer.close()"
+    [ngClass]="{ active: isDrawerOpen }"
+  >
+    <div class="menu-buttons">
+      <button class="close-menu" type="button" (click)="drawer.close()">
+        ✖
+      </button>
+      <button mat-button (click)="drawer.close()" class="sidenav-button">
+        About
+      </button>
+      <button mat-button (click)="drawer.close()" class="sidenav-button">
+        Projects
+      </button>
+      <button mat-button (click)="drawer.close()" class="sidenav-button">
+        Skills
+      </button>
+      <button mat-button (click)="drawer.close()" class="sidenav-button">
+        Contact
+      </button>
+    </div>
+  </div>
+</mat-sidenav>
