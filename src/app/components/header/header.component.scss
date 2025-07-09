@@ -25,6 +25,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
     padding-right: 30px;
+
     .menu-button {
       font-size: 0.7rem;
     }
@@ -33,10 +34,8 @@
   .menu-mobile {
     display: block;
   }
-}
 
-@media (min-width: 768px) {
-  .nav {
+  @media (min-width: 768px) {
     padding-left: 20px;
 
     .logo {
@@ -47,6 +46,9 @@
 
     .menu-desktop {
       display: grid;
+      .menu-button {
+        font-size: 0.8rem;
+      }
     }
 
     .menu-mobile {
@@ -55,6 +57,45 @@
 
     .sidenav {
       display: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .logo {
+      .img-logo {
+        height: 160%;
+      }
+    }
+
+    .menu-desktop {
+      .menu-button {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    .logo {
+      .img-logo {
+        height: 170%;
+      }
+    }
+
+    .menu-desktop {
+      .menu-button {
+        font-size: 1rem;
+      }
+    }
+  }
+  @media (min-width: 1536px) {
+    .logo {
+      .img-logo {
+        height: 200%;
+      }
+    }
+
+    .menu-desktop {
+      .menu-button {
+        font-size: 1.2rem;
+      }
     }
   }
 }
@@ -112,10 +153,8 @@
       border-radius: 0;
     }
   }
-}
 
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .sidenav {
+  @media screen and (max-width: 768px) and (orientation: landscape) {
     width: 33%;
 
     .close-menu {
