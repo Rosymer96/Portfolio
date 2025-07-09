@@ -7,6 +7,8 @@ import {
   MatSidenavContent,
 } from '@angular/material/sidenav';
 import { AboutComponent } from './components/about/about.component';
+import { ProjectPillComponent } from './components/project-pill/project-pill.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,7 @@ import { AboutComponent } from './components/about/about.component';
     HeaderComponent,
     HomeComponent,
     MatSidenavContainer,
-    MatSidenavContent,AboutComponent
+    MatSidenavContent,AboutComponent, ProjectsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -6,25 +6,108 @@
   padding: 0 2rem;
   line-height: 0.8rem;
 
-  .about-me {
+  .sub-tittle {
     line-height: 1.8rem;
     font-size: 1.2rem;
     font-weight: bold;
     color: #fabada;
   }
-  .logo {
-    font-size: 0.8rem;
-    font-weight: bold;
-  }
-  .description {
-    font-size: 0.6rem;
-    line-height: 1rem;
-    text-align: justify;
+  .information {
+    .logo {
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .description {
+      font-size: 0.6rem;
+      line-height: 1rem;
+      text-align: justify;
+    }
   }
 }
 
 @media (min-width: 768px) {
   .about {
     padding: 0 5rem;
+    .sub-tittle {
+      font-size: 1.5rem;
+    }
+    .information {
+      .description {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+      }
+
+      .logo {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    justify-content: space-between;
+    padding: 0 10rem 5rem 10rem;
+
+    .sub-tittle {
+      font-size: 1.5rem;
+    }
+    .information {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      .description {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+      }
+
+      .logo {
+        font-size: 1rem;
+        width: 60%;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .about {
+    .sub-tittle {
+      font-size: 1.8rem;
+    }
+    .information {
+      .description {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1536px) {
+  .about {
+    padding: 0 15rem 5rem 15rem;
+
+    .sub-tittle {
+      font-size: 2rem;
+    }
+    .information {
+      .description {
+        font-size: 1rem;
+        line-height: 1.6rem;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+        width: 60%;
+        line-height: 2rem;
+      }
+    }
   }
 }

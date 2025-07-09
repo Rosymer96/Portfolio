@@ -1,0 +1,11 @@
+<div class="projects-container">
+  <p class="sub-tittle">Proyectos</p>
+  <div class="projects">
+    @for(project of projects(); track $index){
+    <app-project-pill
+      [project]="project"
+      class="project-pill"
+    ></app-project-pill>
+    }
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="project-container">
+  <a class="project" [href]="project()?.link">
+    <a [href]="project()?.link" class="title">{{ project()?.title }}</a>
+    <img [src]="project()?.img" alt="{{ project()?.title }}" class="img" />
+  </a>
+  <p class="description">{{ project()?.description }}</p>
+  <div class="tecnologies">
+    @for(tecnologie of project()?.tecnologies; track $index){
+    <p>{{ tecnologie }}</p>
+    }
+  </div>
+  <a [href]="project()?.linkGitHub" class="icon-github"
+    ><i class="fa-brands fa-github icon"></i
+  ></a>
+</div>
