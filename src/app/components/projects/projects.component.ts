@@ -39,7 +39,7 @@ export class ProjectsComponent {
       img: './img-projects/Hamburgueseria.png',
       description: 'Sitio web estático de una hamburguesería',
       tecnologies: ['HTML', 'CSS', 'Bootstrap'],
-      link: 'https://rosymer96.github.io/HamburgueseriaTrabajoFinalHTML/',
+      link: 'https://rosymer96.github.io/Hamburgueseria-TrabajoFinalHTML/',
       linkGitHub:
         'https://github.com/Rosymer96/Hamburgueseria-TrabajoFinalHTML',
     },
