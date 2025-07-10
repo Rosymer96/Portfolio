@@ -12,7 +12,7 @@ export class ProjectsComponent {
   projects = signal<IProject[]>([
     {
       title: 'NutriCole',
-      img: '/img-projects/NutriCole.png',
+      img: './img-projects/NutriCole.png',
       description: 'Aplicación de gestión de menú escolar',
       tecnologies: ['Angular', 'Node.js', 'MySQL', 'Express.js'],
       link: 'https://github.com/Rosymer96/FrontEnd-NutriCole',
@@ -20,7 +20,7 @@ export class ProjectsComponent {
     },
     {
       title: 'FinanMe',
-      img: '/img-projects/FinanMe.png',
+      img: './img-projects/FinanMe.png',
       description: 'Aplicación de gestión financiera personal',
       tecnologies: ['Angular', 'CSS', 'Material'],
       link: 'https://finan-me-rosymer96s-projects.vercel.app/',
@@ -28,7 +28,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Xiuling Store',
-      img: '/img-projects/XiulingStore.png',
+      img: './img-projects/XiulingStore.png',
       description: 'Tienda virtual de accesorios para niños',
       tecnologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://rosymer96.github.io/XiulingStore/',
@@ -36,7 +36,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Rovers',
-      img: '/img-projects/Hamburgueseria.png',
+      img: './img-projects/Hamburgueseria.png',
       description: 'Sitio web estático de una hamburguesería',
       tecnologies: ['HTML', 'CSS', 'Bootstrap'],
       link: 'https://rosymer96.github.io/HamburgueseriaTrabajoFinalHTML/',
