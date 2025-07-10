@@ -5,6 +5,11 @@
   border-radius: 15px;
   padding: 1rem;
   gap: 0.5rem;
+  &:hover {
+    box-shadow: -3px -1px 19px 11px rgba(255, 255, 255, 0.73);
+    -webkit-box-shadow: -3px -1px 19px 11px rgba(255, 255, 255, 0.73);
+    -moz-box-shadow: -3px -1px 19px 11px rgba(255, 255, 255, 0.73);
+  }
   .project {
     display: flex;
     flex-direction: column;
@@ -26,18 +31,113 @@
   .description,
   .tecnologies {
     font-size: 0.9rem;
-    text-align: justify;
+    text-align: center;
   }
   .tecnologies {
     display: flex;
     gap: 0.8rem;
     font-weight: bold;
+    justify-content: center;
   }
   .icon-github {
     display: flex;
     font-size: 2rem;
     text-decoration: none;
-    color:white;
+    color: white;
     justify-content: end;
+    &:hover {
+      color: #f595c5;
+    }
+  }
+  @media (min-width: 768px) {
+    height: 100%;
+
+    .project {
+      gap: 1rem;
+      .title {
+        font-size: 1rem;
+        &:hover {
+          font-size: 1.3rem;
+        }
+      }
+      .img {
+        height: 200px;
+      }
+    }
+    .description,
+    .tecnologies {
+      font-size: 0.9rem;
+    }
+    .icon-github {
+      font-size: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    height: 100%;
+    .project {
+      .title {
+        font-size: 1.2rem;
+        &:hover {
+          font-size: 1.4rem;
+        }
+      }
+      .img {
+        height: 220px;
+      }
+    }
+    .description,
+    .tecnologies {
+      font-size: 1rem;
+      text-align: center;
+    }
+    .icon-github {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    height: 100%;
+    .project {
+      .title {
+        font-size: 1.3rem;
+        &:hover {
+          font-size: 1.5rem;
+        }
+      }
+      .img {
+        height: 250px;
+      }
+    }
+    .description,
+    .tecnologies {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .icon-github {
+      font-size: 2.5rem;
+    }
+  }
+  @media (min-width: 1536px) {
+    height: 100%;
+    .project {
+      .title {
+        font-size: 1.6rem;
+        &:hover {
+          font-size: 1.8rem;
+        }
+      }
+      .img {
+        height: 300px;
+      }
+    }
+
+    .description,
+    .tecnologies {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .icon-github {
+      font-size: 3rem;
+    }
   }
 }

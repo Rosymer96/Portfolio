@@ -27,13 +27,13 @@
 
 @media (min-width: 768px) {
   .about {
-    padding: 0 5rem 5rem 5rem;
+    padding: 0 3rem 5rem 3rem;
     .sub-tittle {
       font-size: 1.5rem;
     }
     .information {
       .description {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         line-height: 1.2rem;
       }
 
@@ -47,10 +47,10 @@
 @media (min-width: 1024px) {
   .about {
     justify-content: space-between;
-    padding: 0 10rem 5rem 10rem;
+    padding: 0 5rem 5rem 5rem;
 
     .sub-tittle {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
     .information {
       display: flex;
@@ -59,12 +59,12 @@
       justify-content: center;
       align-items: center;
       .description {
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 1.2rem;
       }
 
       .logo {
-        font-size: 1rem;
+        font-size: 1.1rem;
         width: 60%;
         line-height: 1.5rem;
       }
@@ -74,17 +74,20 @@
 
 @media (min-width: 1280px) {
   .about {
+    padding: 0 10rem 5rem 10rem;
+
     .sub-tittle {
       font-size: 1.8rem;
     }
     .information {
       .description {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         line-height: 1.4rem;
       }
 
       .logo {
-        font-size: 1.2rem;
+        width: 70%;
+        font-size: 1.4rem;
       }
     }
   }
@@ -92,19 +95,19 @@
 
 @media (min-width: 1536px) {
   .about {
-    padding: 0 15rem 5rem 15rem;
+    padding: 0 12rem 5rem 12rem;
 
     .sub-tittle {
       font-size: 2rem;
     }
     .information {
       .description {
-        font-size: 1rem;
+        font-size: 1.3rem;
         line-height: 1.6rem;
       }
 
       .logo {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         width: 60%;
         line-height: 2rem;
       }

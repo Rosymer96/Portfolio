@@ -35,7 +35,7 @@ export class ProjectsComponent {
       linkGitHub: 'https://github.com/Rosymer96/XiulingStore',
     },
     {
-      title: 'Hamburguesería',
+      title: 'Rovers',
       img: '/img-projects/Hamburgueseria.png',
       description: 'Sitio web estático de una hamburguesería',
       tecnologies: ['HTML', 'CSS', 'Bootstrap'],

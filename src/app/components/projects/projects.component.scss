@@ -3,17 +3,80 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 0 2rem;
+  padding: 0 2rem 3rem 2rem;
+
   .sub-tittle {
     line-height: 1.8rem;
     font-size: 1.2rem;
     font-weight: bold;
     color: #fabada;
+    padding: 2rem 0;
   }
   .projects {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
-    gap: 1.5rem
+    gap: 1.5rem;
+    justify-content: center;
+
+    .project-pill {
+      width: 100%;
+    }
+  }
+  @media (min-width: 768px) {
+    padding: 0 3rem 3rem 3rem;
+
+    .sub-tittle {
+      font-size: 1.5rem;
+    }
+    .projects {
+      gap: 2rem;
+      justify-content: space-between;
+      .project-pill {
+        width: 47%;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    padding: 0 5rem 3rem 5rem;
+
+    .sub-tittle {
+      font-size: 1.6rem;
+    }
+    .projects {
+      gap: 3rem;
+      justify-content: space-between;
+      .project-pill {
+        width: 47%;
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    padding: 0 10rem 3rem 10rem;
+
+    .sub-tittle {
+      font-size: 1.8rem;
+    }
+    .projects {
+      justify-content: space-between;
+      .project-pill {
+        width: 47%;
+      }
+    }
+  }
+
+  @media (min-width: 1536px) {
+    padding: 0 12rem 3rem 12rem;
+
+    .sub-tittle {
+      font-size: 2rem;
+    }
+    .projects {
+      gap: 4rem;
+      justify-content: space-between;
+      .project-pill {
+        width: 47%;
+      }
+    }
   }
 }
