@@ -43,31 +43,28 @@
       padding: 0 1rem;
       .icon {
         color: white;
-        &:hover{
-          transform: scale(1.2) ;
-      }
+        &:hover {
+          transform: scale(1.2);
+          color: #f595c5;
+        }
       }
     }
   }
-}
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .home {
+  @media screen and (max-width: 768px) and (orientation: landscape) {
     height: calc(100vh - 50px);
     padding: 5rem;
     .img-container {
       padding-right: 2rem;
     }
   }
-}
 
-@media (min-width: 768px) {
-  .home {
+  @media (min-width: 768px) {
     height: calc(100vh - 50px);
     .img-container {
       justify-content: right;
       padding-right: 5rem;
       .img-dev {
-        width: 40%;
+        width: 45%;
       }
     }
     .info-dev {
@@ -85,6 +82,65 @@
         font-size: 2rem;
         gap: 2rem;
         margin: 2rem 0;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .img-container {
+      .img-dev {
+        width: 50%;
+      }
+    }
+    .info-dev {
+      .name-dev {
+        line-height: 3.2rem;
+        font-size: 2.2rem;
+        .name-dev-rv {
+          font-size: 3.2rem;
+        }
+      }
+      .rol {
+        font-size: 1.4rem;
+      }
+      .icons {
+        font-size: 2.4rem;
+        gap: 2.2rem;
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    .info-dev {
+      .name-dev {
+        line-height: 3.3rem;
+        font-size: 2.3rem;
+        .name-dev-rv {
+          font-size: 3.3rem;
+        }
+      }
+      .rol {
+        font-size: 1.5rem;
+      }
+      .icons {
+        font-size: 2.6rem;
+        gap: 2.2rem;
+      }
+    }
+  }
+  @media (min-width: 1536px) {
+    .info-dev {
+      .name-dev {
+        line-height: 3.5rem;
+        font-size: 2.5rem;
+        .name-dev-rv {
+          font-size: 3.5rem;
+        }
+      }
+      .rol {
+        font-size: 1.7rem;
+      }
+      .icons {
+        font-size: 3rem;
+        gap: 2.5rem;
       }
     }
   }
