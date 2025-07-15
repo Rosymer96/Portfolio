@@ -31,4 +31,9 @@ export class SkillsComponent {
       img: './skills-logos/nodejs.svg',
     },
   ]);
+
+  skillsInProgress = signal<ISkill[]>([
+    { name: 'MongoDB', img: './skills-logos/mongodb.svg' },
+    { name: 'PostgreSQL', img: './skills-logos/postgresql.svg' },
+  ]);
 }

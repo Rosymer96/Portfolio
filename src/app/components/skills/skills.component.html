@@ -1,6 +1,6 @@
 <div class="skills-container">
   <p class="sub-title">Habilidades técnicas</p>
-  <p>Habilidades solidas</p>
+  <p class="habi-title">Habilidades sólidas</p>
   <div class="skills">
     @for(skill of skills(); track $index){
     <div class="skill">
@@ -9,5 +9,17 @@
     </div>
     }
   </div>
-  <p>Habilidades en construcción <i class="fa-thin fa-hammer"></i></p>
+  <p class="habi-title">
+    Habilidades en construcción...<span
+      ><i class="fa-solid fa-hammer"></i
+    ></span>
+  </p>
+  <div class="skills">
+    @for(skill of skillsInProgress(); track $index){
+    <div class="skill">
+      <img class="skill-logo" [src]="skill.img" [alt]="skill.name" />
+      <p>{{ skill.name }}</p>
+    </div>
+    }
+  </div>
 </div>

@@ -1,9 +1,10 @@
 .skills-container {
   display: flex;
   flex-direction: column;
-  align-items: start;
   padding: 0 2rem 2rem 2rem;
   line-height: 0.8rem;
+  background-color: black;
+
   .sub-title {
     line-height: 1.8rem;
     font-size: 1.2rem;
@@ -14,13 +15,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin: 1rem 0 2rem 0;
-     .skill {
+    .skill {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
       width: 3rem; /* Aumentado un poco para margen visual */
       height: 5rem; /* Altura suficiente para logo + texto */
@@ -35,7 +35,16 @@
 
       p {
         margin: 0;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .habi-title {
+    font-size: 1rem;
+    span {
+      margin-left: 1rem;
+      i {
+        color: white;
       }
     }
   }
