@@ -9,6 +9,7 @@ import {
 import { AboutComponent } from './components/about/about.component';
 import { ProjectPillComponent } from './components/project-pill/project-pill.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
     HeaderComponent,
     HomeComponent,
     MatSidenavContainer,
-    MatSidenavContent,AboutComponent, ProjectsComponent
+    MatSidenavContent,AboutComponent, ProjectsComponent, SkillsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

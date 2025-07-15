@@ -1,0 +1,13 @@
+<div class="skills-container">
+  <p class="sub-title">Habilidades técnicas</p>
+  <p>Habilidades solidas</p>
+  <div class="skills">
+    @for(skill of skills(); track $index){
+    <div class="skill">
+      <img class="skill-logo" [src]="skill.img" [alt]="skill.name" />
+      <p>{{ skill.name }}</p>
+    </div>
+    }
+  </div>
+  <p>Habilidades en construcción <i class="fa-thin fa-hammer"></i></p>
+</div>
