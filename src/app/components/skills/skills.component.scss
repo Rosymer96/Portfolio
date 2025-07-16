@@ -31,6 +31,9 @@
         height: 4rem;
         object-fit: contain;
         margin-bottom: 0.5rem; /* Controla espacio entre imagen y texto */
+        &:hover{
+          transform: scale(1.1);
+        }
       }
 
       p {
@@ -40,12 +43,82 @@
     }
   }
   .habi-title {
-    font-size: 1rem;
+    margin: 1rem;
+    font-size: 0.9rem;
     span {
-      margin-left: 1rem;
+      margin-left: 0.9rem;
       i {
         color: white;
       }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .skills-container {
+    padding: 0 3rem 5rem 3rem;
+    .sub-title {
+      font-size: 1.5rem;
+    }
+    .skills {
+      gap: 4.3rem;
+    }
+
+    .habi-title {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-container {
+    padding: 0 5rem 5rem 5rem;
+    .sub-title {
+      font-size: 1.6rem;
+    }
+    .skills {
+      gap: 4.5rem;
+    }
+    .habi-title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .skills-container {
+    padding: 0 10rem 5rem 10rem;
+    .sub-title {
+      font-size: 1.8rem;
+    }
+    .skills {
+      gap: 5rem;
+      .skill {
+        width: 4rem;
+        height: 6rem;
+      }
+    }
+    .habi-title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (min-width: 1536px) {
+  .skills-container {
+    padding: 0 20rem 5rem 12rem;
+    .sub-title {
+      font-size: 5rem;
+    }
+    .skills {
+      gap: 6rem;
+
+      .skill {
+        width: 4rem;
+        height: 6rem;
+      }
+    }
+    .habi-title {
+      font-size: 1.5rem;
     }
   }
 }
