@@ -13,7 +13,8 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
-    MatSidenavModule,CommonModule
+    MatSidenavModule,
+    CommonModule,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -29,5 +30,6 @@ export class HeaderComponent {
 
   onOpenedChange(opened: boolean) {
     this.isDrawerOpen = opened;
+    console.log('Drawer abierto?', opened);
   }
 }

@@ -15,7 +15,6 @@ import { ContactComponent } from './components/contact/contact.component';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     HeaderComponent,
     HomeComponent,
     MatSidenavContainer,
