@@ -31,20 +31,21 @@
         height: 4rem;
         object-fit: contain;
         margin-bottom: 0.5rem; /* Controla espacio entre imagen y texto */
-        &:hover{
+        &:hover {
           transform: scale(1.1);
         }
       }
 
       p {
         margin: 0;
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
     }
   }
   .habi-title {
-    margin: 1rem;
+    margin: 1rem 0;
     font-size: 0.9rem;
+    font-weight: bold;
     span {
       margin-left: 0.9rem;
       i {
@@ -107,7 +108,7 @@
   .skills-container {
     padding: 0 20rem 5rem 12rem;
     .sub-title {
-      font-size: 5rem;
+      font-size: 2rem;
     }
     .skills {
       gap: 6rem;
