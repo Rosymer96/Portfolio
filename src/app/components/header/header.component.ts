@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, output, Output, ViewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -20,16 +20,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  isDrawerOpen = false;
 
-  @ViewChild('drawer') drawer!: MatSidenav;
+  toggleMenu = output<void>();
 
-  toggleSidenav() {
-    this.drawer.toggle();
-  }
-
-  onOpenedChange(opened: boolean) {
-    this.isDrawerOpen = opened;
-    console.log('Drawer abierto?', opened);
+  openMenu() {
+    this.toggleMenu.emit();
   }
 }
