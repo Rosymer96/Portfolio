@@ -9,10 +9,30 @@
   >
     <div class="menu-buttons">
       <button class="close-menu" (click)="drawer.close()">✖</button>
-      <button mat-button (click)="drawer.close()">About</button>
-      <button mat-button (click)="drawer.close()">Skills</button>
-      <button mat-button (click)="drawer.close()">Projects</button>
-      <button mat-button (click)="drawer.close()">Contact</button>
+      <button
+        mat-button
+        (click)="drawer.close(); scrollToElement('aboutSection')"
+      >
+        About
+      </button>
+      <button
+        mat-button
+        (click)="drawer.close(); scrollToElement('skillsSection')"
+      >
+        Skills
+      </button>
+      <button
+        mat-button
+        (click)="drawer.close(); scrollToElement('projectsSection')"
+      >
+        Projects
+      </button>
+      <button
+        mat-button
+        (click)="drawer.close(); scrollToElement('contactSection')"
+      >
+        Contact
+      </button>
     </div>
   </mat-sidenav>
 
@@ -20,9 +40,9 @@
   <mat-sidenav-content>
     <app-header (toggleMenu)="drawer.toggle()"></app-header>
     <app-home></app-home>
-    <app-about></app-about>
-    <app-skills></app-skills>
-    <app-projects></app-projects>
-    <app-contact></app-contact>
+    <app-about id="aboutSection"></app-about>
+    <app-skills id="skillsSection"></app-skills>
+    <app-projects id="projectsSection"></app-projects>
+    <app-contact id="contactSection"></app-contact>
   </mat-sidenav-content>
 </mat-sidenav-container>
