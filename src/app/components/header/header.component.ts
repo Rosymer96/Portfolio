@@ -20,10 +20,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-
   toggleMenu = output<void>();
 
   openMenu() {
     this.toggleMenu.emit();
+  }
+
+  goToHome = output<void>();
+
+  backHome() {
+    this.goToHome.emit();
   }
 }

@@ -54,4 +54,11 @@ export class AppComponent {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+
+  backHome() {
+    const element = document.getElementById('homeSection');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

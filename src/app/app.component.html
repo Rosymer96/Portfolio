@@ -11,6 +11,12 @@
       <button class="close-menu" (click)="drawer.close()">✖</button>
       <button
         mat-button
+        (click)="drawer.close(); scrollToElement('homeSection')"
+      >
+        Home
+      </button>
+      <button
+        mat-button
         (click)="drawer.close(); scrollToElement('aboutSection')"
       >
         About
@@ -38,8 +44,8 @@
 
   <!-- Contenido principal -->
   <mat-sidenav-content>
-    <app-header (toggleMenu)="drawer.toggle()"></app-header>
-    <app-home></app-home>
+    <app-header (toggleMenu)="drawer.toggle()" (goToHome)="backHome()" ></app-header>
+    <app-home id="homeSection"></app-home>
     <app-about id="aboutSection"></app-about>
     <app-skills id="skillsSection"></app-skills>
     <app-projects id="projectsSection"></app-projects>
