@@ -4,10 +4,34 @@
   </a>
   <!-- Menú desktop -->
   <div class="menu-desktop">
-    <button class="menu-button" mat-button>About</button>
-    <button class="menu-button" mat-button>Skills</button>
-    <button class="menu-button" mat-button>Projects</button>
-    <button class="menu-button" mat-button>Contact</button>
+    <button
+      class="menu-button"
+      mat-button
+      (click)="goToSection('aboutSection')"
+    >
+      About
+    </button>
+    <button
+      class="menu-button"
+      mat-button
+      (click)="goToSection('skillsSection')"
+    >
+      Skills
+    </button>
+    <button
+      class="menu-button"
+      mat-button
+      (click)="goToSection('projectsSection')"
+    >
+      Projects
+    </button>
+    <button
+      class="menu-button"
+      mat-button
+      (click)="goToSection('contactSection')"
+    >
+      Contact
+    </button>
   </div>
 
   <!-- <span class="menu-spacer"></span> -->

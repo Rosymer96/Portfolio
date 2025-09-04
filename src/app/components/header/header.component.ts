@@ -21,14 +21,18 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   toggleMenu = output<void>();
+  goToHome = output<void>();
+  navigateTo = output<string>();
 
   openMenu() {
     this.toggleMenu.emit();
   }
 
-  goToHome = output<void>();
-
   backHome() {
     this.goToHome.emit();
+  }
+
+   goToSection(sectionId: string) {
+    this.navigateTo.emit(sectionId);
   }
 }

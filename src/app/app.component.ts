@@ -44,10 +44,7 @@ export class AppComponent {
     this.isDrawerOpen = opened;
   }
 
-  /**
-   * Scrolls to the specified element on the page.
-   * @param elementId The ID of the element to scroll to.
-   */
+
   scrollToElement(elementId: string): void {
     const element = document.getElementById(elementId);
     if (element) {
