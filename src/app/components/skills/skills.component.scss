@@ -56,7 +56,7 @@
 }
 @media (min-width: 768px) {
   .skills-container {
-    padding: 0 3rem 5rem 3rem;
+    padding: 50px 3rem 0 3rem;
     .sub-title {
       font-size: 1.5rem;
     }
@@ -72,7 +72,7 @@
 
 @media (min-width: 1024px) {
   .skills-container {
-    padding: 0 5rem 5rem 5rem;
+    padding: 50px 5rem 0 5rem;
     .sub-title {
       font-size: 1.6rem;
     }
@@ -87,7 +87,7 @@
 
 @media (min-width: 1280px) {
   .skills-container {
-    padding: 0 10rem 5rem 10rem;
+    padding: 50px 10rem 0 10rem;
     .sub-title {
       font-size: 1.8rem;
     }
@@ -106,7 +106,7 @@
 
 @media (min-width: 1536px) {
   .skills-container {
-    padding: 0 20rem 5rem 12rem;
+    padding: 50px 20rem 0 12rem;
     .sub-title {
       font-size: 2rem;
     }

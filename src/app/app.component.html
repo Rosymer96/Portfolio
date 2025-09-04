@@ -44,7 +44,7 @@
 
   <!-- Contenido principal -->
   <mat-sidenav-content>
-    <app-header (toggleMenu)="drawer.toggle()" (goToHome)="backHome()" ></app-header>
+    <app-header (toggleMenu)="drawer.toggle()" (goToHome)="backHome()" (navigateTo)="scrollToElement($event)" ></app-header>
     <app-home id="homeSection"></app-home>
     <app-about id="aboutSection"></app-about>
     <app-skills id="skillsSection"></app-skills>
