@@ -2,7 +2,7 @@
   <a
     class="project"
     [href]="project()?.link"
-    (click)="trackProjectVisit(project()!)"
+    (click)="trackProjectVisit()"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -22,7 +22,7 @@
     }
   </div>
   <a
-    (click)="trackGithubProjectVisit(project()!)"
+    (click)="trackGithubProjectVisit()"
     [href]="project()?.githubLink"
     class="icon-github"
     target="_blank"
