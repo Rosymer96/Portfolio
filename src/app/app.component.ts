@@ -12,6 +12,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DataLayerService } from './services/data-layer.service';
 
 @Component({
   selector: 'app-root',
@@ -32,8 +33,17 @@ import { FooterComponent } from './components/footer/footer.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+
+constructor(private dataLayer: DataLayerService) {}
+
   title = 'PORTFOLIO-ROSA-VELA';
   isDrawerOpen = false;
+
+  ngOnInit(): void {
+    this.dataLayer.onChange((event) => {
+      console.log('Data Layer Event:', event);
+    })
+  }
 
   // Section references
   @ViewChild('homeRef') homeRef!: ElementRef;

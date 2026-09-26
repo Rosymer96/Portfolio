@@ -57,6 +57,14 @@ export class ContactComponent {
     this.copiedTimeout = setTimeout(() => {
       this.copied = false;
     }, 2000);
+
+    this.dataLayer.push({
+      event: 'click',
+      eventInfo: {
+        action: 'copy_email',
+        componentName: 'contact',
+      },
+    });
   }
 
   async submitForm(): Promise<void> {

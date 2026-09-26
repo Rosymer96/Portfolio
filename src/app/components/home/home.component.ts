@@ -11,12 +11,6 @@ import { DataLayerService } from '../../services/data-layer.service';
 export class HomeComponent {
   constructor(private dataLayer: DataLayerService) {}
 
-  ngOnInit(): void {
-    this.dataLayer.onChange((event) => {
-      console.log('Data Layer Event:', event);
-    })
-  }
-
   downloadCV() {
     const link = document.createElement('a');
     link.href = 'CV_Rosa_Vela.pdf';
