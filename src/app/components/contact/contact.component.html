@@ -14,9 +14,9 @@
 
   <form
     class="contact-form"
-    action="https://formsubmit.co/rosymer96@gmail.com"
-    method="POST"
-    target="_blank"
+    [formGroup]="contactForm"
+    (ngSubmit)="submitForm()"
+    novalidate
   >
     <input type="hidden" name="_captcha" value="false" />
     <input type="hidden" name="_template" value="table" />
@@ -28,39 +28,86 @@
 
     <label>
       <span>Nombre de la empresa</span>
-      <input type="text" name="empresa" placeholder="Tu empresa" required />
+      <input type="text" formControlName="company" placeholder="Tu empresa" />
+      <small
+        *ngIf="
+          contactForm.get('company')?.touched &&
+          contactForm.get('company')?.hasError('required')
+        "
+      >
+        Este campo es obligatorio.
+      </small>
     </label>
 
     <label>
       <span>Persona de contacto</span>
       <input
         type="text"
-        name="persona"
+        formControlName="contactPerson"
         placeholder="Nombre completo"
-        required
       />
+      <small
+        *ngIf="
+          contactForm.get('contactPerson')?.touched &&
+          contactForm.get('contactPerson')?.hasError('required')
+        "
+      >
+        Este campo es obligatorio.
+      </small>
     </label>
 
     <label>
       <span>Correo electrónico</span>
       <input
         type="email"
-        name="email"
+        formControlName="email"
         placeholder="correo@empresa.com"
-        required
       />
+      <small
+        *ngIf="
+          contactForm.get('email')?.touched &&
+          contactForm.get('email')?.hasError('required')
+        "
+      >
+        Este campo es obligatorio.
+      </small>
+      <small
+        *ngIf="
+          contactForm.get('email')?.touched &&
+          contactForm.get('email')?.hasError('email')
+        "
+      >
+        Debe ser un email válido.
+      </small>
     </label>
 
     <label>
       <span>Mensaje</span>
       <textarea
-        name="mensaje"
+        formControlName="message"
         rows="6"
         placeholder="Escribe aquí tu mensaje"
-        required
       ></textarea>
+      <small
+        *ngIf="
+          contactForm.get('message')?.touched &&
+          contactForm.get('message')?.hasError('required')
+        "
+      >
+        Este campo es obligatorio.
+      </small>
+      <small
+        *ngIf="
+          contactForm.get('message')?.touched &&
+          contactForm.get('message')?.hasError('minWords')
+        "
+      >
+        El mensaje debe tener al menos 5 palabras.
+      </small>
     </label>
 
-    <button type="submit" class="send-button">Enviar mensaje</button>
+    <button type="submit" class="send-button" [disabled]="contactForm.invalid">
+      Enviar mensaje
+    </button>
   </form>
 </div>
