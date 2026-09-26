@@ -1,10 +1,6 @@
 <mat-card class="home">
   <div class="img-container">
-    <img
-      src="./4D8675D1-37A8-4EB6-99FF-21CAEEEE88B7.jpeg"
-      class="img-dev"
-      alt="img-dev"
-    />
+    <img src="./foto_rosa_vela_optimized.jpeg" class="img-dev" alt="img-dev" />
   </div>
 
   <div class="info-dev">
@@ -14,16 +10,27 @@
     </p>
     <p class="rol">Junior Developer</p>
     <div class="icons">
-      <a href="https://github.com/Rosymer96"
+      <a
+        (click)="trackVisitGitHub()"
+        href="https://github.com/Rosymer96"
+        target="_blank"
+        rel="noopener noreferrer"
         ><i class="fa-brands fa-github icon"></i
       ></a>
-      <a href="https://www.linkedin.com/in/rosa-vela96/">
+      <a
+        (click)="trackVisitLinkedIn()"
+        href="https://www.linkedin.com/in/rosa-vela96/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fa-brands fa-linkedin icon"></i>
       </a>
-      <a href="#contactSection">
+      <a href="#contactSection" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-envelope icon"></i>
       </a>
     </div>
-    <button class="cv-button" (click)="descargarCV()">Descargar CV</button>
+    <button class="cv-button" (click)="downloadCV()" (click)="trackDownload()">
+      Descarga mi CV
+    </button>
   </div>
 </mat-card>

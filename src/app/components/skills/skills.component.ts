@@ -40,7 +40,7 @@ export class SkillsComponent {
   skillsInProgress = signal<ISkill[]>([
     {
       name: 'Python',
-      img: './skills-logos/python.webp',
+      img: './skills-logos/python.svg',
     },
     { name: 'Salesforce', img: './skills-logos/salesforce.webp' },
     { name: 'Adobe', img: './skills-logos/adobe.png' },

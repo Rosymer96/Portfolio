@@ -35,7 +35,7 @@ export class AppComponent {
   title = 'PORTFOLIO-ROSA-VELA';
   isDrawerOpen = false;
 
-  // Referencias a secciones
+  // Section references
   @ViewChild('homeRef') homeRef!: ElementRef;
   @ViewChild('aboutRef') aboutRef!: ElementRef;
   @ViewChild('skillsRef') skillsRef!: ElementRef;

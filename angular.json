@@ -28,7 +28,9 @@
               "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@adobe/adobe-client-data-layer/dist/adobe-client-data-layer.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -45,7 +47,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/portfolio-rosa-vela/"
+              "baseHref": "/Portfolio/"
             },
             "development": {
               "optimization": false,

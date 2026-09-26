@@ -1,5 +1,5 @@
+import { DataLayerService } from '../../services/data-layer.service';
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+
+constructor(private dataLayer: DataLayerService) {}
+
   copied = false;
   private copiedTimeout: ReturnType<typeof setTimeout> | null = null;
 
