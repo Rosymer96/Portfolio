@@ -3,6 +3,7 @@ import { IProject } from '../../interfaces/project';
 
 @Component({
   selector: 'app-project-pill',
+  standalone: true,
   imports: [],
   templateUrl: './project-pill.component.html',
   styleUrl: './project-pill.component.scss',

@@ -4,6 +4,7 @@ import { IProject } from '../../interfaces/project';
 
 @Component({
   selector: 'app-projects',
+  standalone: true,
   imports: [ProjectPillComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',

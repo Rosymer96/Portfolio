@@ -50,14 +50,12 @@
       }
     }
 
-    // Oculta el menú en pantallas grandes
     @media (min-width: 768px) {
       display: none;
     }
   }
 }
 
-// Extra: puedes ajustar botones en pantallas medianas
 @media (min-width: 576px) and (max-width: 767px) {
   .sidenav-container .sidenav-mobile .menu-buttons {
     gap: 3rem;

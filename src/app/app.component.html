@@ -44,11 +44,16 @@
 
   <!-- Contenido principal -->
   <mat-sidenav-content>
-    <app-header (toggleMenu)="drawer.toggle()" (goToHome)="backHome()" (navigateTo)="scrollToElement($event)" ></app-header>
+    <app-header
+      (toggleMenu)="drawer.toggle()"
+      (goToHome)="backHome()"
+      (navigateTo)="scrollToElement($event)"
+    ></app-header>
     <app-home id="homeSection"></app-home>
     <app-about id="aboutSection"></app-about>
     <app-skills id="skillsSection"></app-skills>
     <app-projects id="projectsSection"></app-projects>
     <app-contact id="contactSection"></app-contact>
+    <app-footer id="footerSection"></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

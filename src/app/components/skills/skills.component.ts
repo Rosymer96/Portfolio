@@ -3,6 +3,7 @@ import { ISkill } from '../../interfaces/skill';
 
 @Component({
   selector: 'app-skills',
+  standalone: true,
   imports: [],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
@@ -30,10 +31,18 @@ export class SkillsComponent {
       name: 'Node.js',
       img: './skills-logos/nodejs.svg',
     },
+    {
+      name: 'C',
+      img: './skills-logos/c.png',
+    },
   ]);
 
   skillsInProgress = signal<ISkill[]>([
-    { name: 'MongoDB', img: './skills-logos/mongodb.svg' },
-    { name: 'PostgreSQL', img: './skills-logos/postgresql.svg' },
+    {
+      name: 'Python',
+      img: './skills-logos/python.webp',
+    },
+    { name: 'Salesforce', img: './skills-logos/salesforce.webp' },
+    { name: 'Adobe', img: './skills-logos/adobe.png' },
   ]);
 }

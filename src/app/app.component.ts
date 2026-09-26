@@ -8,13 +8,14 @@ import {
   MatSidenavModule,
 } from '@angular/material/sidenav';
 import { AboutComponent } from './components/about/about.component';
-import { ProjectPillComponent } from './components/project-pill/project-pill.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     HeaderComponent,
     HomeComponent,
@@ -24,6 +25,7 @@ import { ContactComponent } from './components/contact/contact.component';
     ProjectsComponent,
     SkillsComponent,
     ContactComponent,
+    FooterComponent,
     MatSidenavModule,
   ],
   templateUrl: './app.component.html',
@@ -43,7 +45,6 @@ export class AppComponent {
   onOpenedChange(opened: boolean) {
     this.isDrawerOpen = opened;
   }
-
 
   scrollToElement(elementId: string): void {
     const element = document.getElementById(elementId);

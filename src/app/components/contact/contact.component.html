@@ -1,17 +1,65 @@
 <div class="contact-container">
-  <p class="sub-title">Contacto</p>
-  <div class="icons">
-    <a class="link" href="https://github.com/Rosymer96"
-      ><i class="fa-brands fa-github icon"></i>
-      <p>https://github.com/Rosymer96</p></a
-    >
-    <a class="link" href="https://www.linkedin.com/in/rosa-vela-valqui96/">
-      <i class="fa-brands fa-linkedin icon"></i>
-      <p>https://www.linkedin.com/in/rosa-vela96/</p>
-    </a>
-    <a class="link" href="mailto:rosymer96@gmail.com">
-      <i class="fa-solid fa-envelope icon"></i>
-      <p>rosymer96&#64;gmail.com</p>
-    </a>
+  <div class="contact-header">
+    <p class="sub-title">Contacto</p>
+
+    <div class="email-row">
+      <p class="email-text">rosymer96&#64;gmail.com</p>
+      <button type="button" class="copy-button" (click)="copyEmail()">
+        <i class="fa-solid fa-copy"></i>
+      </button>
+    </div>
   </div>
+
+  <p class="copied-message" [class.visible]="copied">copiado</p>
+
+  <form
+    class="contact-form"
+    action="https://formsubmit.co/rosymer96@gmail.com"
+    method="POST"
+  >
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_template" value="table" />
+    <input
+      type="hidden"
+      name="_subject"
+      value="Nuevo mensaje desde el portafolio"
+    />
+
+    <label>
+      <span>Nombre de la empresa</span>
+      <input type="text" name="empresa" placeholder="Tu empresa" required />
+    </label>
+
+    <label>
+      <span>Persona de contacto</span>
+      <input
+        type="text"
+        name="persona"
+        placeholder="Nombre completo"
+        required
+      />
+    </label>
+
+    <label>
+      <span>Correo electrónico</span>
+      <input
+        type="email"
+        name="email"
+        placeholder="correo@empresa.com"
+        required
+      />
+    </label>
+
+    <label>
+      <span>Mensaje</span>
+      <textarea
+        name="mensaje"
+        rows="6"
+        placeholder="Escribe aquí tu mensaje"
+        required
+      ></textarea>
+    </label>
+
+    <button type="submit" class="send-button">Enviar mensaje</button>
+  </form>
 </div>
