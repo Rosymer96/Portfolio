@@ -42,7 +42,7 @@ export class SkillsComponent {
       name: 'Python',
       img: './skills-logos/python.svg',
     },
-    { name: 'Salesforce', img: './skills-logos/salesforce.webp' },
+    { name: 'Salesforce', img: './skills-logos/salesforce.svg' },
     { name: 'Adobe', img: './skills-logos/adobe.png' },
   ]);
 }

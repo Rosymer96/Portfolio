@@ -50,7 +50,7 @@ constructor(private dataLayer: DataLayerService) {}
         name: 'portfolio',
         site: 'rosa-vela-portfolio',
         language: document.documentElement.lang,
-        enviroment: isDevMode() ? 'development' : 'production',
+        environment: isDevMode() ? 'development' : 'production',
       }
     })
 
