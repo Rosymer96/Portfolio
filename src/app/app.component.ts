@@ -59,7 +59,7 @@ constructor(private dataLayer: DataLayerService) {}
       event: 'page_view',
       eventInfo: {
         action: 'page_view',
-        component_name: 'app-root',
+        component_name: 'app',
       },
     })
 

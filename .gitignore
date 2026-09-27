@@ -1,17 +1,54 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# ============================================================
+# Portfolio Rosa Vela - Angular 19 + yarn + GitHub Pages
+# ============================================================
 
-# Compiled output
+# --- Salida de build (se genera con `yarn ng build`, nunca se versiona) ---
 /dist
 /tmp
 /out-tsc
 /bazel-out
+3rdpartylicenses.txt
+prerendered-routes.json
 
-# Node
+# --- Caché de Angular CLI (entera, no solo /cache) ---
+/.angular
+
+# --- Dependencias ---
 /node_modules
-npm-debug.log
-yarn-error.log
 
-# IDEs and editors
+# --- Gestor de paquetes: el proyecto usa yarn (yarn.lock SÍ se versiona) ---
+package-lock.json
+npm-shrinkwrap.json
+.yarn-integrity
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+testem.log
+/libpeerconnection.log
+
+# --- Variables de entorno y secretos ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials.*
+
+# --- Tests y cobertura ---
+/coverage
+/.nyc_output
+
+# --- IDEs y editores ---
 .idea/
 .project
 .classpath
@@ -19,8 +56,9 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+*.sublime-project
 
-# Visual Studio Code
+# Visual Studio Code: se comparten solo los ficheros de configuración del proyecto
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -28,15 +66,16 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
-/.angular/cache
+# --- Varios ---
 .sass-cache/
 /connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
 /typings
 
-# System files
+# --- Ficheros del sistema operativo ---
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
 Thumbs.db
+ehthumbs.db
+Desktop.ini

@@ -97,6 +97,7 @@
     }
   },
   "cli": {
-    "analytics": "e13840fb-7b32-4ab4-8b69-92f76d0a880c"
+    "analytics": "e13840fb-7b32-4ab4-8b69-92f76d0a880c",
+    "packageManager": "yarn"
   }
 }
