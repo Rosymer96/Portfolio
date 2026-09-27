@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { DataLayerService } from '../../services/data-layer.service';
 @Component({
@@ -10,6 +10,8 @@ import { DataLayerService } from '../../services/data-layer.service';
 })
 export class HomeComponent {
   constructor(private dataLayer: DataLayerService) {}
+
+  goToContactSection = output<void>();
 
   downloadCv() {
     const link = document.createElement('a');

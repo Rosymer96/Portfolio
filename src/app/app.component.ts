@@ -1,5 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ElementRef, ViewChild, isDevMode } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import {
@@ -40,9 +39,30 @@ constructor(private dataLayer: DataLayerService) {}
   isDrawerOpen = false;
 
   ngOnInit(): void {
+    // Subscribe to data layer changes
     this.dataLayer.onChange((event) => {
       console.log('Data Layer Event:', event);
     })
+
+    // Push initial page information to the data layer
+    this.dataLayer.push({
+      page:{
+        name: 'portfolio',
+        site: 'rosa-vela-portfolio',
+        language: document.documentElement.lang,
+        enviroment: isDevMode() ? 'development' : 'production',
+      }
+    })
+
+    // Push initial page view event to the data layer
+    this.dataLayer.push({
+      event: 'page_view',
+      eventInfo: {
+        action: 'page_view',
+        component_name: 'app-root',
+      },
+    })
+
   }
 
   // Section references

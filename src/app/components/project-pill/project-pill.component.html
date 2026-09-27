@@ -6,13 +6,10 @@
     target="_blank"
     rel="noopener noreferrer"
   >
-    <a
-      [href]="project()?.link"
+    <span
       class="title"
-      target="_blank"
-      rel="noopener noreferrer"
-      >{{ project()?.title }}</a
-    >
+      >{{ project()?.title }}
+    </span>
     <img [src]="project()?.img" alt="{{ project()?.title }}" class="img" />
   </a>
   <p class="description">{{ project()?.description }}</p>

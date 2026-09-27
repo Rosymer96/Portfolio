@@ -49,7 +49,7 @@
       (goToHome)="backHome()"
       (navigateTo)="scrollToElement($event)"
     ></app-header>
-    <app-home id="homeSection"></app-home>
+    <app-home id="homeSection" (goToContactSection)="scrollToElement('contactSection')"></app-home>
     <app-about id="aboutSection"></app-about>
     <app-skills id="skillsSection"></app-skills>
     <app-projects id="projectsSection"></app-projects>
