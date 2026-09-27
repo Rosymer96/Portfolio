@@ -12,6 +12,14 @@ import { IProject } from '../../interfaces/project';
 export class ProjectsComponent {
 
   projects = signal<IProject[]>([
+      {
+      title: 'Portfolio Digital Analytics',
+      img: './img-projects/DigitalAnalytics.png',
+      description: 'Event tracking with Adobe Client Data Layer and a tagging plan (SDR)',
+      technologies: ['Angular', 'TypeScript', 'Adobe Client Data Layer'],
+      link: 'https://docs.google.com/presentation/d/1KkNiAnPCndseXpXaORQIbbnsH-_6Ptjk/edit?usp=sharing&ouid=110646154850101358727&rtpof=true&sd=true',
+      githubLink: 'https://github.com/Rosymer96/Portfolio',
+    },
     {
       title: 'NutriCole',
       img: './img-projects/NutriCole.png',
