@@ -12,6 +12,7 @@
     color: #fabada;
     padding: 1rem 0 0.5rem 0;
   }
+
   .projects {
     display: flex;
     flex-wrap: wrap;
@@ -23,50 +24,91 @@
       width: 100%;
     }
   }
+
   @media (min-width: 768px) {
-    padding: 50px 3rem 3rem 3rem;
+    padding: 50px 2rem 3rem 2rem;
 
     .sub-tittle {
       font-size: 1.5rem;
     }
+
     .projects {
-      gap: 2rem;
-      justify-content: space-between;
+      gap: 1.5rem;
+      justify-content: center;
+
       .project-pill {
-        width: 47%;
+        width: calc(50% - 0.75rem);
       }
     }
   }
+
   @media (min-width: 1024px) {
-    padding: 50px 5rem 3rem 5rem;
+    padding: 50px 2rem 3rem 2rem;
 
     .sub-tittle {
       font-size: 1.6rem;
     }
+
     .projects {
-      gap: 3rem;
+      gap: 1.5rem;
+      justify-content: center;
+
+      .project-pill {
+        width: calc(33.333% - 1rem);
+
+        &:nth-child(n + 4) {
+          &:nth-child(4),
+          &:nth-child(5) {
+            margin: 0 auto;
+          }
+        }
+      }
     }
   }
+
   @media (min-width: 1280px) {
-    padding: 50px 10rem 3rem 10rem;
+    padding: 50px 3rem 3rem 3rem;
 
     .sub-tittle {
       font-size: 1.8rem;
     }
+
     .projects {
-      justify-content: space-between;
+      gap: 2rem;
+      justify-content: center;
+
+      .project-pill {
+        width: calc((100% - 4rem) / 3);
+
+        &:nth-child(4),
+        &:nth-child(5) {
+          width: calc((100% - 4rem) / 3);
+          margin: 0 auto;
+        }
+      }
     }
   }
 
   @media (min-width: 1536px) {
-    padding: 50px 12rem 3rem 12rem;
+    padding: 50px 4rem 3rem 4rem;
 
     .sub-tittle {
       font-size: 2rem;
     }
+
     .projects {
-      gap: 4rem;
-      justify-content: space-between;
+      gap: 2.5rem;
+      justify-content: center;
+
+      .project-pill {
+        width: calc((100% - 5rem) / 3);
+
+        &:nth-child(4),
+        &:nth-child(5) {
+          width: calc((100% - 5rem) / 3);
+          margin: 0 auto;
+        }
+      }
     }
   }
 }
