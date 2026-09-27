@@ -144,6 +144,21 @@
       box-shadow: 0 0 0 2px rgba(250, 186, 218, 0.15);
     }
 
+    .form-feedback {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.4;
+
+      &.success {
+        color: #9ae6b4;
+      }
+
+      &.error {
+        color: #ff9fc1;
+      }
+    }
+
     .send-button {
       width: fit-content;
       border: none;

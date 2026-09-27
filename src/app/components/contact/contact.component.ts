@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -20,6 +21,8 @@ export class ContactComponent {
   private copiedTimeout: ReturnType<typeof setTimeout> | null = null;
 
   isSubmitting = false;
+  submitStatus: 'idle' | 'success' | 'error' = 'idle';
+  private formStarted = false;
 
   contactForm: FormGroup;
 
@@ -32,6 +35,38 @@ export class ContactComponent {
       contactPerson: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, this.minWordsValidator(5)]],
+    });
+
+    this.contactForm.valueChanges.pipe(takeUntilDestroyed()).subscribe(() => {
+      if (this.formStarted) return;
+
+      this.formStarted = true;
+      this.dataLayer.push({
+        event: 'form_start',
+        eventInfo: {
+          action: 'start_contact_form',
+          component_name: 'contact',
+        },
+      });
+    });
+  }
+
+  @HostListener('window:pagehide')
+  onPageHide(): void {
+    if (!this.formStarted) return;
+
+    const values = this.contactForm.value;
+    const completedFields = Object.keys(values).filter(
+      (key) => !!values[key]?.toString().trim(),
+    );
+
+    this.dataLayer.push({
+      event: 'form_abandon',
+      eventInfo: {
+        action: 'abandon_contact_form',
+        component_name: 'contact',
+        fields_completed: completedFields,
+      },
     });
   }
 
@@ -70,34 +105,43 @@ export class ContactComponent {
   async submitForm(): Promise<void> {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
-      return ;
-    }
-
-    if (this.isSubmitting) {
       return;
     }
 
+    if (this.isSubmitting) return;
+
     this.isSubmitting = true;
+    this.submitStatus = 'idle';
 
     const formData = this.contactForm.value;
 
-    try{
-      const respone = await fetch('https://formsubmit.co/ajax/rosymer96@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/rosymer96@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            _subject: 'Nuevo mensaje desde el portafolio',
+            _template: 'table',
+            _captcha: 'false',
+            _honey: '',
+            _replyto: formData.email,
+            empresa: formData.company,
+            persona: formData.contactPerson,
+            email: formData.email,
+            mensaje: formData.message,
+          }),
         },
-        body: JSON.stringify({
-          _captcha: 'false',
-          empresa: formData.company,
-          persona: formData.contactPerson,
-          email: formData.email,
-          mensaje: formData.message,
-        }),      
-      });
+      );
 
-      if (!respone.ok) {
-        throw new Error('Network response was not ok');
+      const result = await response.json();
+
+      if (!response.ok || String(result.success) !== 'true') {
+        throw new Error(result.message ?? 'Form submission failed');
       }
 
       this.dataLayer.push({
@@ -108,12 +152,21 @@ export class ContactComponent {
         },
       });
 
+      this.submitStatus = 'success';
       this.contactForm.reset();
-    }
-    catch (error) {
+      this.formStarted = false;
+    } catch (error) {
       console.error('Error submitting form:', error);
-    }
-    finally {
+      this.submitStatus = 'error';
+
+      this.dataLayer.push({
+        event: 'form_error',
+        eventInfo: {
+          action: 'error_contact_form',
+          component_name: 'contact',
+        },
+      });
+    } finally {
       this.isSubmitting = false;
     }
   }

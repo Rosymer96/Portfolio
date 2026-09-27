@@ -18,14 +18,6 @@
     (ngSubmit)="submitForm()"
     novalidate
   >
-    <input type="hidden" name="_captcha" value="false" />
-    <input type="hidden" name="_template" value="table" />
-    <input
-      type="hidden"
-      name="_subject"
-      value="Nuevo mensaje desde el portafolio"
-    />
-
     <label>
       <span>Nombre de la empresa</span>
       <input type="text" formControlName="company" placeholder="Tu empresa" />
@@ -106,8 +98,15 @@
       </small>
     </label>
 
-    <button type="submit" class="send-button" [disabled]="contactForm.invalid">
-      Enviar mensaje
+    <button type="submit" class="send-button" [disabled]="isSubmitting">
+      {{ isSubmitting ? "Enviando..." : "Enviar mensaje" }}
     </button>
+
+    <p class="form-feedback success" *ngIf="submitStatus === 'success'">
+      ¡Gracias! Tu mensaje se ha enviado correctamente.
+    </p>
+    <p class="form-feedback error" *ngIf="submitStatus === 'error'">
+      No se pudo enviar el mensaje. Puedes escribirme directamente a mi correo.
+    </p>
   </form>
 </div>
