@@ -62,7 +62,7 @@ export class ContactComponent {
       event: 'click',
       eventInfo: {
         action: 'copy_email',
-        componentName: 'contact',
+        component_name: 'contact',
       },
     });
   }
@@ -101,10 +101,10 @@ export class ContactComponent {
       }
 
       this.dataLayer.push({
-        event: 'form_submission',
+        event: 'submit',
         eventInfo: {
           action: 'submit_contact_form',
-          componentName: 'contact',
+          component_name: 'contact',
         },
       });
 

@@ -15,24 +15,24 @@ export class ProjectPillComponent {
 
   project = input<IProject>();
 
-  trackProjectVisit() {
+  projectVisit() {
     this.dataLayer.push({
       event: 'click',
       eventInfo: {
         action: 'visit_project',
         project_name: this.project()?.title,
-        componentName: 'project-pill',
+        component_name: 'project-pill',
       },
     });
   }
 
-  trackGithubProjectVisit() {
+  githubProjectVisit() {
     this.dataLayer.push({
       event: 'click',
       eventInfo: {
         action: 'visit_github_project',
         project_name: this.project()?.title,
-        componentName: 'project-pill',
+        component_name: 'project-pill',
       },
     });
   }

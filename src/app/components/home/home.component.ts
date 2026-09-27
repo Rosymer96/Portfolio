@@ -11,40 +11,38 @@ import { DataLayerService } from '../../services/data-layer.service';
 export class HomeComponent {
   constructor(private dataLayer: DataLayerService) {}
 
-  downloadCV() {
+  downloadCv() {
     const link = document.createElement('a');
     link.href = 'CV_Rosa_Vela.pdf';
     link.download = 'CV_Rosa_Vela.pdf';
     link.click();
-  }
 
-  trackDownload() {
     this.dataLayer.push({
-      event:'cv_download',
+      event:'click',
       eventInfo: {
-        action: 'click',
+        action: 'download_cv',
         file_name: 'CV_Rosa_Vela.pdf',
-        componentName: 'home',
+        component_name: 'home',
       },
     });
   }
 
-  trackVisitGitHub() {
+  visitGitHub() {
     this.dataLayer.push({
       event: 'click',
       eventInfo: {
         action: 'visit_github',
-        componentName: 'home',
+        component_name: 'home',
       },
     });
   }
 
-  trackVisitLinkedIn() {
+  visitLinkedIn() {
     this.dataLayer.push({
       event: 'click',
       eventInfo: {
         action: 'visit_linkedin',
-        componentName: 'home',
+        component_name: 'home',
       },
     });
   }
